@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] -GSAC</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+
+    <style>
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .affix ~ .container-fluid {
+            position: relative;
+            top: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid" style="background-color:darkgreen;color:#fff;">
+        <div class="row">
+            <div class="col-sm-1" style="height :100px;">
+                <span>
+                    <img src="~/images/College Logo.jpg" class="img-circle" alt="Cinque Terre" width="100" height="78" style="padding-top:19px;">
+                </span>
+            </div>
+            <div class="col-sm-10">
+                <h1 style="font-size: 40px;margin-left:75px;">GOVT. SUNDARBAN ADARSHA COLLEGE</h1>
+            </div>
+            <div class="col-sm-3" style="padding:0;">
+
+            </div>
+            <div class="clearfix visible-sm"></div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197" style="border-radius: 0;">
+        <div class="container-fluid" style="background-color:#0F172D">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavbar">
+
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand" style="width: 150px;">@ViewData["Title"]</span>
+
+            </div>
+            <div class="collapse navbar-collapse" id="primaryNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 17px;font-weight: bold;color: white;">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About" style="font-size: 17px;font-weight: bold;color: white;">About</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 17px;font-weight: bold;color: white;">Academic<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Student" asp-action="RulesAndRegulation" style="background-color: #0F172D;color:white">Rules & Regulation</a></li>
+                            <li><a asp-area="" asp-controller="Student" asp-action="StudentInformation" style="background-color: #0F172D;color:white">Student Information</a></li>
+                            <li><a asp-area="" asp-controller="Student" asp-action="ClassRoutine" style="background-color: #0F172D;color:white">Class Routine</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 17px;font-weight: bold;color: white;">Admission<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Student" asp-action="AdmissionInformation" style="background-color: #0F172D;color:white">Admission Information</a></li>
+                            <li><a asp-area="" asp-controller="Student" asp-action="AdmissionGuidelines" style="background-color: #0F172D;color:white">Admission Guidelines</a></li>
+                            <li><a asp-area="" asp-controller="Student" asp-action="AdmissionContact" style="background-color: #0F172D;color:white">Admission Contact</a></li>
+                            <li><a asp-area="" asp-controller="Student" asp-action="Scholarship" style="background-color: #0F172D;color:white">Scholarship</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 17px;font-weight: bold;color: white;">FacultyList<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Bangla" style="background-color: #0F172D;color:white">বাংলা বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="English" style="background-color: #0F172D;color:white">ইংরেজি বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Math" style="background-color: #0F172D;color:white">গনিত ‍বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Chemistry" style="background-color: #0F172D;color:white">রসায়ন বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Physics" style="background-color: #0F172D;color:white">পদার্থ বিজ্ঞান বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="ICT" style="background-color: #0F172D;color:white">তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Accounting" style="background-color: #0F172D;color:white">হিসাব বিজ্ঞান বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Management" style="background-color: #0F172D;color:white">ব্যবস্থাপনা বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyList" asp-action="Economics" style="background-color: #0F172D;color:white">অর্থনীতি বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="FacultyListt" asp-action="Geography" style="background-color: #0F172D;color:white">ভূগোল বিভাগ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 17px;font-weight: bold;color: white;">Department<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Department" asp-action="Bangla" style="background-color: #0F172D;color:white">বাংলা বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="English" style="background-color: #0F172D;color:white">ইংরেজি বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Math" style="background-color: #0F172D;color:white">গনিত ‍বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Chemistry" style="background-color: #0F172D;color:white">রসায়ন বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Physics" style="background-color: #0F172D;color:white">পদার্থ বিজ্ঞান বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="ICT" style="background-color: #0F172D;color:white">তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Accounting" style="background-color: #0F172D;color:white">হিসাব বিজ্ঞান বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Management" style="background-color: #0F172D;color:white">ব্যবস্থাপনা বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Economics" style="background-color: #0F172D;color:white">অর্থনীতি বিভাগ</a></li>
+                            <li><a asp-area="" asp-controller="Department" asp-action="Geography" style="background-color: #0F172D;color:white">ভূগোল বিভাগ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 17px;font-weight: bold;color: white;">Result<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a asp-area="" asp-controller="Student" asp-action="TermOrSemester" style="background-color: #0F172D;color:white">Term/Semester</a></li>
+                            <li><a asp-area="" asp-controller="Student" asp-action="Board" style="background-color: #0F172D;color:white">Board</a></li>
+                        </ul>
+                    </li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Facilities" style="font-size: 17px;font-weight: bold;color: white;">Facilities</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Co_Curricular" style="font-size: 17px;font-weight: bold;color: white;">Co-Curricular</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact" style="font-size: 17px;font-weight: bold;color: white;">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        
+    @RenderBody()
+    <hr />
+    <footer>
+        <div class="container-fluid text-center" style="background-color: darkgreen;color:white;">
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span style="color: lawngreen; font-size: x-large">Important Links</span>
+
+                    <h4><a target="_blank" href="https://www.teachers.gov.bd/%22" style="color: white">-শিক্ষক বাতায়ন</a></h4>
+                    <h4><a target="_blank" href="https://moedu.gov.bd/" style="color: white">-Ministry of Education</a></h4>
+                    <h4><a target="_blank" href="http://www.jessoreboard.gov.bd/" style="color: white">-Jessore Education Board</a></h4>
+                    <h4><a target="_blank" href="http://www.nctb.gov.bd/" style="color: white">-NCTB</a></h4>
+                    <h4><a target="_blank" href="http://10minuteschool.com" style="color: white">-10 minute school</a></h4>
+                    <h4><a target="_blank" href="http://www.nu.edu.bd/" style="color: white">-National University</a></h4>
+                    <h4><a target="_blank" href="http://www.dshe.gov.bd/" style="color: white">-Directorate Of Secondary and Higher Education</a></h4>
+                    <h4><a target="_blank" href="http://www.bteb.gov.bd/" style="color: white">-Technical Education Board</a></h4>
+
+                </div>
+                <div class="col-sm-4">
+                    <span style="color: lawngreen; font-size: x-large">Address</span>
+                    <address>
+
+                        Government Sundarban Adarsha College,<br />
+
+                        Govt. Sundarban Adarsha College- 0315<br />
+                        91 Khanjhan Ali road, <br />Khulna Sadar - 9100
+                        <br />Khulna-Jessore-Dhaka Highway
+                        <br />Khulna Bangladesh<br />
+
+                        Tel : 041721915<br />
+                        Mobile:+88-01715849579<br />
+                        Fax: 041721915<br />
+                        Email : govt.sundarban.ac@gmail.com<br />
+
+                    </address>
+
+                </div>
+                <div class="col-sm-4">
+                    <span style="color: lawngreen; font-size: x-large">Social Links</span>
+                                
+                        <p><a href="https://facebook.com/?lang=en" style="color: white">FaceBook</a></p>
+                        <p><a href="https://www.instagram.com/" style="color: white">Instagram</a></p>
+                        <p><a href="https://twitter.com/?lang=en" style="color: white">Twitter</a></p>
+                        <p><a href="https://www.linkedin.com/" style="color: white">Linkedin</a></p>       
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            .topbar, .copyrights-area {
+                background: #353535;
+            }
+
+            .copyrights-area {
+                background: none repeat scroll 0 0 #373c43;
+                height: 50px;
+                line-height: 50px;
+                overflow: hidden;
+            }
+        </style>
+        <div class="copyrights-area">
+            <div class="inner">
+                <p class="copyrights-text" style="color: white; margin-left: 25px;">&copy;2018 <a target="_blank" href="https://www.facebook.com/settings?tab=account&section=username"> MD. TOUHEDUR RAHMAAN</</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
